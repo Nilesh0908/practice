@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-cluster
+  name: gke-cicd
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: gcr.io/brilliant-tower-425812-h0/flaks@sha256:97be4f4d51faa8137873325568ffb9a846b66870ee6a1feed840b42a5e565f27
+        image: gcr.io/cicd-426910/cicd:latest
         ports:
         - containerPort: 8080
         env:
@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: hello
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: hello
   ports:
