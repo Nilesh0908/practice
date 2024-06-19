@@ -14,4 +14,4 @@ steps:
   - --location=us-central1
   - --cluster=cicd-cluster
   options:
-   logging: NONE
+   logging: CLOUD_LOGGING_ONLY
