@@ -13,5 +13,5 @@ steps:
   - --image=gcr.io/cicd-426910/cicd:latest
   - --location=us-central1
   - --cluster=cicd-cluster
-  options:
+options:
   logging: CLOUD_LOGGING_ONLY
